@@ -11,6 +11,7 @@ The progression of Federated Learning reflects a transition from simple cloud-co
 
 
 ```mermaid
+flowchart LR
 [FedAvg (2017)] -----------> 
 [Personalized & Vertical FL] -----------> 
 [Fully Decentralized / Peer-to-Peer](Centralized Server) (Heterogeneous Data Structuring) (Blockchain / Mesh Orchestration)
