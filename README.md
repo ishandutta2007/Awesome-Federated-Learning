@@ -22,11 +22,10 @@ The progression of Federated Learning reflects a transition from simple cloud-co
 
 ```mermaid
 flowchart LR
-    A["FedAvg (2017)"<br/>(Centralized Server)] -----------> B["Personalized & Vertical FL"<br/>(Heterogeneous Data Structuring)]
+    A["FedAvg (2017)<br/>(Centralized Server)"] -----------> B["Personalized & Vertical FL<br/>(Heterogeneous Data Structuring)"]
     B -----------> C["Fully Decentralized / Peer-to-Peer<br/>(Blockchain / Mesh Orchestration)"]
-
 ```
-    
+
 ```mermaid
 flowchart LR
     A["FedAvg (2017)"] --> B["Personalized & Vertical FL"]
