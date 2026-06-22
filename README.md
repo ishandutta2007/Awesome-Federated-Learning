@@ -1,11 +1,21 @@
-# Awesome-Federated-Learning
-## Federated Learning (FL): Evolution, Variants, Types, & Applications
+# 🚀 Awesome-Federated-Learning 🌟
+
+<div align="center">
+  <img src="assets/banner.svg" alt="Awesome Federated Learning Banner" width="800"/>
+  <br/>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</div>
+
+## 🧠 Federated Learning (FL): Evolution, Variants, Types, & Applications
+
+Welcome to the most comprehensive and **SEO-optimized** repository for **Federated Learning (FL)** resources, variants, and applications! 📚✨
 
 Federated Learning is a decentralized machine learning paradigm that enables multiple client devices (e.g., mobile phones, hospitals, IoT devices) to collaboratively train a shared model without ever centralizing their raw data. Instead of moving private data to a central cloud server, the model weights or gradients are sent to the devices, updated locally, and aggregated centrally, preserving data privacy by design.
 
 ---
 
-## 1. The Chronological Evolution
+## ⏳ 1. The Chronological Evolution
 
 The progression of Federated Learning reflects a transition from simple cloud-coordinated heuristic aggregation to highly adaptive, decentralized, and security-hardened ecosystems.
 
@@ -26,7 +36,7 @@ flowchart LR
 
 ---
 
-## 2. Structural & Data Partitioning Variants
+## 🏗️ 2. Structural & Data Partitioning Variants
 
 These variants define how data is distributed across different nodes in the network based on the overlap of sample spaces and feature spaces.
 
@@ -38,7 +48,7 @@ These variants define how data is distributed across different nodes in the netw
 
 ---
 
-## 3. Network Architecture & Scaling Types
+## 🌐 3. Network Architecture & Scaling Types
 
 These types define the system-level topology and physical distribution of the participating processing units.
 
@@ -49,7 +59,7 @@ These types define the system-level topology and physical distribution of the pa
 
 ---
 
-## 4. Advanced Security & Privacy Adapters
+## 🔐 4. Advanced Security & Privacy Adapters
 
 While Federated Learning keeps raw data local, model gradients can still leak private information through reverse-engineering attacks. These variants augment FL with cryptographic boundaries.
 
@@ -61,7 +71,7 @@ While Federated Learning keeps raw data local, model gradients can still leak pr
 
 ---
 
-## 5. Production Real-World Applications
+## 🏭 5. Production Real-World Applications
 
 | Application | Description | Year First Used | Paper Link |
 | :--- | :--- | :--- | :--- |
