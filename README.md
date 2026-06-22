@@ -26,15 +26,6 @@ flowchart LR
     B -----------> C["Fully Decentralized / Peer-to-Peer<br/>(Blockchain / Mesh Orchestration)"]
 ```
 
-```mermaid
-flowchart LR
-    A["FedAvg (2017)"] --> B["Personalized & Vertical FL"]
-    B --> C["Fully Decentralized / Peer-to-Peer"]
-    C --> D["Centralized Server"]
-    D --> E["Heterogeneous Data Structuring"]
-    E --> F["Blockchain / Mesh Orchestration"]
-```
-
 | Era | Concept | Year First Used | Paper Link |
 | :--- | :--- | :--- | :--- |
 | [**The Foundation Era (FedAvg)**](pages/FedAvg.md) | Introduced by Google. Synchronous rounds of local Stochastic Gradient Descent (SGD) on client devices, followed by an unweighted or weighted averaging of model updates on a central coordinator server. | 2016 | [McMahan et al.](https://arxiv.org/abs/1602.05629) |
