@@ -9,11 +9,13 @@ Federated Learning is a decentralized machine learning paradigm that enables mul
 
 The progression of Federated Learning reflects a transition from simple cloud-coordinated heuristic aggregation to highly adaptive, decentralized, and security-hardened ecosystems.
 
-
-```mermaid
+```
 flowchart LR
-    A[FedAvg (2017)] -----------> B[Personalized & Vertical FL]
-    B -----------> C[Fully Decentralized / Peer-to-Peer](Centralized Server) (Heterogeneous Data Structuring) (Blockchain / Mesh Orchestration)
+    A["FedAvg (2017)"] --> B["Personalized & Vertical FL"]
+    B --> C["Fully Decentralized / Peer-to-Peer"]
+    C --> D["Centralized Server"]
+    D --> E["Heterogeneous Data Structuring"]
+    E --> F["Blockchain / Mesh Orchestration"]
 ```
 
 *   **The Foundation Era (FedAvg, ~2017)**
