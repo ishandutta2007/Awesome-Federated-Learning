@@ -3,7 +3,7 @@
 <div align="center">
   <img src="assets/banner.svg" alt="Awesome Federated Learning Banner" width="100%"/>
   <br/>
-  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=gold" alt="GitHub Stars"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=blue" alt="GitHub Forks"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=gold" alt="GitHub_Stars"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=blue" alt="GitHub Forks"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </div>
 
 ---
@@ -124,9 +124,9 @@ The table below catalogs leading commercial and hosted federated learning soluti
 
 ## 💻 7. Top Open-Source GitHub Frameworks
 
-Curated collection of top open-source repositories for self-hosted federated learning, privacy-preserving machine learning, and decentralized model training. **Sorted descending by GitHub star count**:
+Curated collection of top open-source repositories for self-hosted federated learning, privacy-preserving machine learning, and decentralized model training. **Sorted descending by GitHub Stars_Count**:
 
-| Framework & Repository | Stars | Primary Language / Ecosystem | Description & Architectural Highlights | License |
+| Framework & Repository | GitHub_Stars | Primary Language / Ecosystem | Description & Architectural Highlights | License |
 | :--- | :--- | :--- | :--- | :--- |
 | **[PySyft](https://github.com/OpenMined/PySyft)** 🔐 | [![Stars](https://img.shields.io/github/stars/OpenMined/PySyft?style=social&color=white)](https://github.com/OpenMined/PySyft/stargazers) | Python • PyTorch | OpenMined's flagship library for secure, private deep learning. Decouples private data from model training using Multi-Party Computation (MPC), Differential Privacy, and Homomorphic Encryption primitives. | Apache 2.0 |
 | **[Flower](https://github.com/adap/flower)** 🌸 | [![Stars](https://img.shields.io/github/stars/adap/flower?style=social&color=white)](https://github.com/adap/flower/stargazers) | Python • Agnostic | The industry standard framework-agnostic FL framework. Seamlessly interoperates with PyTorch, TensorFlow, JAX, Hugging Face, Scikit-learn, and MLX. Supports massive scalability from mobile edge devices to multi-GPU clusters. | Apache 2.0 |
@@ -153,7 +153,7 @@ Contributions are warmly welcomed! Help make this repository the definitive reso
 
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch** (`git checkout -b feature/awesome-addition`).
-3. 📝 **Add or update entries** following our established table schemas, including specific pricing, free tier limits, star badges, and links.
+3. 📝 **Add or update entries** following our established table schemas, including specific pricing, free tier limits, Stars_Badges, and links.
 4. ✅ **Ensure code and link integrity**: Keep descriptions objective, factual, and backed by seminal literature or official documentation.
 5. 🚀 **Submit a Pull Request** with a concise description of your additions.
 
