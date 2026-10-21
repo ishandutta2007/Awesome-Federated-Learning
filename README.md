@@ -1,7 +1,7 @@
 # 🚀 Awesome-Federated-Learning 🌟
 
 <div align="center">
-  <img src="assets/banner.svg" alt="Awesome Federated Learning Banner" width="800"/>
+  <img src="assets/banner.svg" alt="Awesome Federated Learning Banner" width="100%"/>
   <br/>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
