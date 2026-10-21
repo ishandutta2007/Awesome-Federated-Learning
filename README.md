@@ -90,96 +90,188 @@ While Federated Learning keeps raw data local, model gradients can still leak pr
 </div>
 # Awesome-Federated-Learning
 
-# Top Federated Learning Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Privacy-Preserving Collaborative Training, Decentralized Data & Self-Hosted FL Frameworks*  
-**Last updated: October 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Federated Learning**. These tools enable multiple parties to collaboratively train machine learning models without centralizing raw data—critical for healthcare, finance, and any domain where data sovereignty and regulatory compliance are non-negotiable.
-
-**Examples** include Flower, NVIDIA FLARE (Clara), IBM Federated Learning, Rhino Health, Owkin, FedML, PySyft, Substra, EdgeDelta, and Apheris (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, healthcare-grade deployments, and transparent privacy guarantees—ideal for hospitals, research consortia, and enterprises that cannot centralize sensitive data. The open-source landscape is anchored by **TensorFlow Federated** (Google's research framework), **Flower** (framework-agnostic standard), **NVIDIA FLARE** (enterprise/regulated deployments), **Substra** (healthcare production-proven from Owkin), and **PySyft** (encrypted computation), with **FedML** bridging research and production and **OpenFL** (Intel) providing an alternative enterprise-grade option.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[NVIDIA Clara](https://www.nvidia.com/en-us/clara/)**  
-  NVIDIA's healthcare AI platform, with NVIDIA FLARE as its federated learning runtime. Clara provides domain-specific tooling for medical imaging and genomics, while FLARE handles the federated orchestration.
-
-- **[Owkin](https://www.owkin.com/)**  
-  AI biotech company that originated Substra and remains its primary contributor. Offers federated learning services for pharmaceutical research and clinical trials, with Substra as the underlying open-source foundation.
-
-- **[Rhino Health](https://www.rhinohealth.com/)**  
-  Federated learning platform specifically designed for healthcare and life sciences. Focuses on enabling multi-institutional collaboration while maintaining HIPAA and GDPR compliance. Commercial offering with healthcare-specific workflows.
-
-- **[Flower (Cloud/Enterprise)](https://flower.ai/)**  
-  Commercial tier of the Flower federated learning framework. Offers managed infrastructure and enterprise support for the open-source core. Flower is framework-agnostic and widely used in research.
-
-- **[IBM Federated Learning](https://www.ibm.com/products/federated-learning)**  
-  IBM's enterprise federated learning offering, integrated with IBM Cloud Pak for Data and Watson Studio. Supports both horizontal and vertical federated learning. Commercial support and integration with IBM's broader AI governance tooling.
-
-- **[EdgeDelta](https://edgedelta.com/)**  
-  Observability platform with edge processing capabilities. While not a pure federated learning platform, it supports distributed data processing at the edge, relevant for privacy-sensitive inference scenarios.
-
-- **[Apheris](https://www.apheris.com/)**  
-  Enterprise federated learning platform focused on regulated industries (healthcare, finance, manufacturing). Provides governance, audit trails, and compliance controls for multi-party data collaboration.
-
-## Open-Source GitHub Projects
-
-- **[TensorFlow Federated (TFF)](https://github.com/tensorflow/federated)**  
-  Google's open-source framework for machine learning and other computations on decentralized data. TFF provides two layers: the **Federated Learning (FL) API** (`tff.learning`) for applying included federated training and evaluation to existing TensorFlow models, and the **Federated Core (FC) API** for expressing novel federated algorithms by combining TensorFlow with distributed communication operators . Includes a single-machine simulation runtime for experiments. Best for TensorFlow-centric research teams that want to experiment with novel FL algorithms and need fine-grained control over federated computation primitives.
-
-- **[Flower](https://github.com/adap/flower)**  
-  Framework-agnostic federated learning framework with a client-server abstraction that works with PyTorch, TensorFlow, JAX, scikit-learn, Hugging Face, PyTorch Lightning, fastai, MLX, XGBoost, and even Pandas for federated analytics . Widely adopted in research for its simplicity and flexibility. Flower Baselines provides community-contributed reproductions of popular FL publications (FedProx, FedNova, FedBN, FedMeta, and more) for researchers to build upon . Apache 2.0 licensed. Best for research and teams that want to avoid framework lock-in while maintaining access to state-of-the-art FL algorithms.
-
-- **[NVIDIA FLARE](https://github.com/NVIDIA/NVFlare)**  
-  NVIDIA Federated Learning Application Runtime Environment. Domain-agnostic Python SDK supporting horizontal and vertical federated learning, with peer-reviewed research implementations across medical imaging, federated optimization, privacy analysis, and large language models—including FedBPT (ICML 2024), ConDistFL (DeCaF 2023), FedBN (ICLR 2021), and privacy-preserving brain tumour segmentation (MLMI 2019) . Component-based architecture with Controller/Worker execution model and support for both simulation and production deployment. Apache 2.0 licensed. Best for enterprise and regulated deployments, including clinical use cases with a strong research track record.
-
-- **[Substra](https://github.com/Substra/substra)**  
-  The most proven open-source federated learning software designed for healthcare research . Originally developed by Owkin and now hosted by the Linux Foundation for AI and Data. Provides a flexible Python interface and web application for running FL training at scale. Has been deployed in production by hospitals and biotech companies (e.g., the MELLODDY project) . Apache 2.0 licensed across its repository ecosystem (substrafl, substra-backend, substra-frontend, orchestrator) . Best for healthcare consortia and production clinical research where regulatory compliance and real-world deployment are primary requirements.
-
-- **[PySyft (OpenMined)](https://github.com/OpenMined/PySyft)**  
-  A Python library for secure, private deep learning that decouples private data from model training using Multi-Party Computation (MPC) within PyTorch . Emphasizes privacy-preserving and encrypted computation over distributed data, rather than being purely a federated averaging framework. Apache 2.0 licensed. **Important caveat**: the project's own README historically stated "Do NOT use this code to protect data (private or otherwise) - at present it is very insecure" . Best for research and experimentation with privacy primitives, not production privacy guarantees without additional hardening.
-
-- **[FedML](https://github.com/FedML-AI/FedML)**  
-  Unified and scalable ML library for large-scale distributed training, model serving, and federated learning. Targets cross-device and cross-silo production workflows with a unified research library . 4,170+ GitHub stars, Apache 2.0 licensed. Includes specialized sub-projects: FedNLP (NAACL 2022), FedGraphNN (ICLR'21 workshops), FedCV (computer vision), FedIoT (on-device anomaly detection), and FedML-Mobile (Android/iOS) . Best for teams that want to bridge research experimentation and production federated learning across diverse domains.
-
-- **[OpenFL (Intel)](https://github.com/securefederatedai/openfl)**  
-  Open framework for federated learning, now hosted by LF AI & Data . Features a Workflow API (experimental) inspired by Metaflow for composing custom aggregator and collaborator tasks, plus a Privacy Meter based on membership inference attacks for evaluating privacy leakage . Includes tutorials for scikit-learn linear regression and PyTorch FedProx. Best for Intel-based research clusters and teams seeking an enterprise-oriented alternative to Flower with built-in privacy evaluation tooling.
-
-### Additional Strong Open-Source Options
-
-- **IBM Federated Learning (Community Edition)** — Free for non-commercial use, with built-in enterprise-strength features. Available at `IBM/federated-learning-lib` . Best for exploring IBM's FL approach before committing to the commercial offering.
-- **Fed-BioMed** — Open-source project focused on empowering healthcare using non-centralized approaches for statistical analysis and machine learning, based on Python, PyTorch, and Scikit-learn . Best for healthcare research with a focus on medical imaging and clinical data.
-- **FATE (WeBank)** — Federated AI Technology Enabler, widely used in Chinese enterprise deployments. Supports horizontal and vertical federated learning with privacy mechanisms including differential privacy and secure computation .
-- **Frameworks for building custom systems**: Pair **Flower** for framework-agnostic orchestration with **Substra** for healthcare-grade production deployment. Use **NVIDIA FLARE** when enterprise support and a proven research track record in medical imaging are priorities. **TensorFlow Federated** provides the lowest-level primitives for novel algorithm development, while **PySyft** offers MPC-based encrypted computation for advanced privacy experiments. **OpenFL** bridges research and production with Intel's ecosystem and privacy evaluation tools.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Federated learning frameworks vary significantly in privacy guarantees (differential privacy, homomorphic encryption, secure aggregation), healthcare compliance readiness, and operational complexity; evaluate against your regulatory requirements.
-- PySyft's own documentation has historically warned against using it to protect sensitive data due to security limitations; verify current status before production use .
-- Self-hosted solutions require proper PKI setup, network security, and audit logging to ensure that "privacy-preserving" claims hold in practice.
-
----
-
-**Made for healthcare AI researchers, privacy engineers, data governance teams, and organizations building collaborative intelligence without centralizing sensitive data.**  
+## Top Federated Learning Ecosystem
+
+
+
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+
+*Focused on Privacy-Preserving Collaborative Training, Decentralized Data & Self-Hosted FL Frameworks*  
+
+**Last updated: October 2026**
+
+
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Federated Learning**. These tools enable multiple parties to collaboratively train machine learning models without centralizing raw data—critical for healthcare, finance, and any domain where data sovereignty and regulatory compliance are non-negotiable.
+
+
+
+**Examples** include Flower, NVIDIA FLARE (Clara), IBM Federated Learning, Rhino Health, Owkin, FedML, PySyft, Substra, EdgeDelta, and Apheris (the category leaders).
+
+
+
+**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, healthcare-grade deployments, and transparent privacy guarantees—ideal for hospitals, research consortia, and enterprises that cannot centralize sensitive data. The open-source landscape is anchored by **TensorFlow Federated** (Google's research framework), **Flower** (framework-agnostic standard), **NVIDIA FLARE** (enterprise/regulated deployments), **Substra** (healthcare production-proven from Owkin), and **PySyft** (encrypted computation), with **FedML** bridging research and production and **OpenFL** (Intel) providing an alternative enterprise-grade option.
+
+
+
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+
+
+
+## Table of Contents
+
+- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+
+- [Open-Source GitHub Projects](#open-source-github-projects)
+
+- [How to Contribute](#how-to-contribute)
+
+- [Disclaimer](#disclaimer)
+
+
+
+## SaaS/Hosted Platforms
+
+
+
+- **[NVIDIA Clara](https://www.nvidia.com/en-us/clara/)**  
+
+  NVIDIA's healthcare AI platform, with NVIDIA FLARE as its federated learning runtime. Clara provides domain-specific tooling for medical imaging and genomics, while FLARE handles the federated orchestration.
+
+
+
+- **[Owkin](https://www.owkin.com/)**  
+
+  AI biotech company that originated Substra and remains its primary contributor. Offers federated learning services for pharmaceutical research and clinical trials, with Substra as the underlying open-source foundation.
+
+
+
+- **[Rhino Health](https://www.rhinohealth.com/)**  
+
+  Federated learning platform specifically designed for healthcare and life sciences. Focuses on enabling multi-institutional collaboration while maintaining HIPAA and GDPR compliance. Commercial offering with healthcare-specific workflows.
+
+
+
+- **[Flower (Cloud/Enterprise)](https://flower.ai/)**  
+
+  Commercial tier of the Flower federated learning framework. Offers managed infrastructure and enterprise support for the open-source core. Flower is framework-agnostic and widely used in research.
+
+
+
+- **[IBM Federated Learning](https://www.ibm.com/products/federated-learning)**  
+
+  IBM's enterprise federated learning offering, integrated with IBM Cloud Pak for Data and Watson Studio. Supports both horizontal and vertical federated learning. Commercial support and integration with IBM's broader AI governance tooling.
+
+
+
+- **[EdgeDelta](https://edgedelta.com/)**  
+
+  Observability platform with edge processing capabilities. While not a pure federated learning platform, it supports distributed data processing at the edge, relevant for privacy-sensitive inference scenarios.
+
+
+
+- **[Apheris](https://www.apheris.com/)**  
+
+  Enterprise federated learning platform focused on regulated industries (healthcare, finance, manufacturing). Provides governance, audit trails, and compliance controls for multi-party data collaboration.
+
+
+
+## Open-Source GitHub Projects
+
+
+
+- **[TensorFlow Federated (TFF)](https://github.com/tensorflow/federated)**  
+
+  Google's open-source framework for machine learning and other computations on decentralized data. TFF provides two layers: the **Federated Learning (FL) API** (`tff.learning`) for applying included federated training and evaluation to existing TensorFlow models, and the **Federated Core (FC) API** for expressing novel federated algorithms by combining TensorFlow with distributed communication operators . Includes a single-machine simulation runtime for experiments. Best for TensorFlow-centric research teams that want to experiment with novel FL algorithms and need fine-grained control over federated computation primitives.
+
+
+
+- **[Flower](https://github.com/adap/flower)**  
+
+  Framework-agnostic federated learning framework with a client-server abstraction that works with PyTorch, TensorFlow, JAX, scikit-learn, Hugging Face, PyTorch Lightning, fastai, MLX, XGBoost, and even Pandas for federated analytics . Widely adopted in research for its simplicity and flexibility. Flower Baselines provides community-contributed reproductions of popular FL publications (FedProx, FedNova, FedBN, FedMeta, and more) for researchers to build upon . Apache 2.0 licensed. Best for research and teams that want to avoid framework lock-in while maintaining access to state-of-the-art FL algorithms.
+
+
+
+- **[NVIDIA FLARE](https://github.com/NVIDIA/NVFlare)**  
+
+  NVIDIA Federated Learning Application Runtime Environment. Domain-agnostic Python SDK supporting horizontal and vertical federated learning, with peer-reviewed research implementations across medical imaging, federated optimization, privacy analysis, and large language models—including FedBPT (ICML 2024), ConDistFL (DeCaF 2023), FedBN (ICLR 2021), and privacy-preserving brain tumour segmentation (MLMI 2019) . Component-based architecture with Controller/Worker execution model and support for both simulation and production deployment. Apache 2.0 licensed. Best for enterprise and regulated deployments, including clinical use cases with a strong research track record.
+
+
+
+- **[Substra](https://github.com/Substra/substra)**  
+
+  The most proven open-source federated learning software designed for healthcare research . Originally developed by Owkin and now hosted by the Linux Foundation for AI and Data. Provides a flexible Python interface and web application for running FL training at scale. Has been deployed in production by hospitals and biotech companies (e.g., the MELLODDY project) . Apache 2.0 licensed across its repository ecosystem (substrafl, substra-backend, substra-frontend, orchestrator) . Best for healthcare consortia and production clinical research where regulatory compliance and real-world deployment are primary requirements.
+
+
+
+- **[PySyft (OpenMined)](https://github.com/OpenMined/PySyft)**  
+
+  A Python library for secure, private deep learning that decouples private data from model training using Multi-Party Computation (MPC) within PyTorch . Emphasizes privacy-preserving and encrypted computation over distributed data, rather than being purely a federated averaging framework. Apache 2.0 licensed. **Important caveat**: the project's own README historically stated "Do NOT use this code to protect data (private or otherwise) - at present it is very insecure" . Best for research and experimentation with privacy primitives, not production privacy guarantees without additional hardening.
+
+
+
+- **[FedML](https://github.com/FedML-AI/FedML)**  
+
+  Unified and scalable ML library for large-scale distributed training, model serving, and federated learning. Targets cross-device and cross-silo production workflows with a unified research library . 4,170+ GitHub stars, Apache 2.0 licensed. Includes specialized sub-projects: FedNLP (NAACL 2022), FedGraphNN (ICLR'21 workshops), FedCV (computer vision), FedIoT (on-device anomaly detection), and FedML-Mobile (Android/iOS) . Best for teams that want to bridge research experimentation and production federated learning across diverse domains.
+
+
+
+- **[OpenFL (Intel)](https://github.com/securefederatedai/openfl)**  
+
+  Open framework for federated learning, now hosted by LF AI & Data . Features a Workflow API (experimental) inspired by Metaflow for composing custom aggregator and collaborator tasks, plus a Privacy Meter based on membership inference attacks for evaluating privacy leakage . Includes tutorials for scikit-learn linear regression and PyTorch FedProx. Best for Intel-based research clusters and teams seeking an enterprise-oriented alternative to Flower with built-in privacy evaluation tooling.
+
+
+
+### Additional Strong Open-Source Options
+
+
+
+- **IBM Federated Learning (Community Edition)** — Free for non-commercial use, with built-in enterprise-strength features. Available at `IBM/federated-learning-lib` . Best for exploring IBM's FL approach before committing to the commercial offering.
+
+- **Fed-BioMed** — Open-source project focused on empowering healthcare using non-centralized approaches for statistical analysis and machine learning, based on Python, PyTorch, and Scikit-learn . Best for healthcare research with a focus on medical imaging and clinical data.
+
+- **FATE (WeBank)** — Federated AI Technology Enabler, widely used in Chinese enterprise deployments. Supports horizontal and vertical federated learning with privacy mechanisms including differential privacy and secure computation .
+
+- **Frameworks for building custom systems**: Pair **Flower** for framework-agnostic orchestration with **Substra** for healthcare-grade production deployment. Use **NVIDIA FLARE** when enterprise support and a proven research track record in medical imaging are priorities. **TensorFlow Federated** provides the lowest-level primitives for novel algorithm development, while **PySyft** offers MPC-based encrypted computation for advanced privacy experiments. **OpenFL** bridges research and production with Intel's ecosystem and privacy evaluation tools.
+
+
+
+## How to Contribute
+
+
+
+1. Fork the repo.
+
+2. Add/edit entries in `README.md` (follow existing format).
+
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+
+4. Submit PR with a short explanation.
+
+
+
+Star the repo if you find it useful!
+
+
+
+## Disclaimer
+
+
+
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+
+- Federated learning frameworks vary significantly in privacy guarantees (differential privacy, homomorphic encryption, secure aggregation), healthcare compliance readiness, and operational complexity; evaluate against your regulatory requirements.
+
+- PySyft's own documentation has historically warned against using it to protect sensitive data due to security limitations; verify current status before production use .
+
+- Self-hosted solutions require proper PKI setup, network security, and audit logging to ensure that "privacy-preserving" claims hold in practice.
+
+
+
+---
+
+
+
+**Made for healthcare AI researchers, privacy engineers, data governance teams, and organizations building collaborative intelligence without centralizing sensitive data.**  
+
 Let's make federated learning more open, auditable, and deployable in regulated environments.
