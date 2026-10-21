@@ -3,275 +3,195 @@
 <div align="center">
   <img src="assets/banner.svg" alt="Awesome Federated Learning Banner" width="100%"/>
   <br/>
-  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
-  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=gold" alt="GitHub Stars"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Federated-Learning?style=flat-square&color=blue" alt="GitHub Forks"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a> <a href="https://github.com/ishandutta2007/Awesome-Federated-Learning/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a> <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </div>
+
+---
 
 ## 🧠 Federated Learning (FL): Evolution, Variants, Types, & Applications
 
-Welcome to the most comprehensive and **SEO-optimized** repository for **Federated Learning (FL)** resources, variants, and applications! 📚✨
+Welcome to the most comprehensive and **SEO-optimized** repository for **Federated Learning (FL)**, **Decentralized AI**, **Privacy-Preserving Machine Learning (PPML)**, and **Collaborative Edge Intelligence**! 📚✨
 
-Federated Learning is a decentralized machine learning paradigm that enables multiple client devices (e.g., mobile phones, hospitals, IoT devices) to collaboratively train a shared model without ever centralizing their raw data. Instead of moving private data to a central cloud server, the model weights or gradients are sent to the devices, updated locally, and aggregated centrally, preserving data privacy by design.
+Federated Learning is a distributed machine learning framework that enables multiple client devices (e.g., mobile phones, hospitals, autonomous vehicles, IoT sensors, financial institutions) to collaboratively train a shared global model without ever centralizing raw data. Instead of uploading private and sensitive records to a centralized cloud datacenter, global model weights or gradients are transmitted to edge nodes, trained locally on private datasets, and aggregated into a unified model—preserving data sovereignty, regulatory compliance (GDPR, HIPAA, CCPA), and confidentiality by design.
+
+---
+
+## 📑 Table of Contents
+
+- [⏳ 1. The Chronological Evolution](#-1-the-chronological-evolution)
+- [🏗️ 2. Structural & Data Partitioning Variants](#️-2-structural--data-partitioning-variants)
+- [🌐 3. Network Architecture & Scaling Types](#-3-network-architecture--scaling-types)
+- [🔐 4. Advanced Security & Privacy Adapters](#-4-advanced-security--privacy-adapters)
+- [🏭 5. Production Real-World Applications](#-5-production-real-world-applications)
+- [☁️ 6. Top SaaS & Hosted Platforms](#️-6-top-saas--hosted-platforms)
+  - [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+  - [🏢 Enterprise SaaS Matrix](#-enterprise-saas-matrix)
+- [💻 7. Top Open-Source GitHub Frameworks](#-7-top-open-source-github-frameworks)
+- [🤝 8. How to Contribute](#-8-how-to-contribute)
+- [☕ 9. Support & Community](#-9-support--community)
+- [⭐️ 10. Star History](#️-10-star-history)
+- [⚠️ 11. Disclaimer](#️-11-disclaimer)
 
 ---
 
 ## ⏳ 1. The Chronological Evolution
 
-The progression of Federated Learning reflects a transition from simple cloud-coordinated heuristic aggregation to highly adaptive, decentralized, and security-hardened ecosystems.
-
+The progression of Federated Learning reflects a transition from simple cloud-coordinated heuristic aggregation to highly adaptive, decentralized, heterogeneous, and cryptographic-hardened ecosystems.
 
 ```mermaid
 flowchart LR
-    A["FedAvg (2017)<br/>(Centralized Server)"] -----------> B["Personalized & Vertical FL<br/>(Heterogeneous Data Structuring)"]
-    B -----------> C["Fully Decentralized / Peer-to-Peer<br/>(Blockchain / Mesh Orchestration)"]
+    A["FedAvg (2016-2017)<br/>(Centralized Coordinator)"] -----------> B["Personalized & Vertical FL (2018-2020)<br/>(Heterogeneous Data Structuring)"]
+    B -----------> C["Fully Decentralized & Trustless (2021-Present)<br/>(Blockchain / P2P / Privacy Mesh)"]
 ```
 
-| Era | Concept | Year First Used | Paper Link |
+| Era | Concept & Breakthrough | Year First Used | Seminal Paper Link |
 | :--- | :--- | :--- | :--- |
-| [**The Foundation Era (FedAvg)**](pages/FedAvg.md) | Introduced by Google. Synchronous rounds of local Stochastic Gradient Descent (SGD) on client devices, followed by an unweighted or weighted averaging of model updates on a central coordinator server. | 2016 | [McMahan et al.](https://arxiv.org/abs/1602.05629) |
-| [**The System Heterogeneity Era**](pages/System_Heterogeneity.md) | Developed to handle Non-IID (not identically and independently distributed) data distributions and varying client hardware speeds, introducing tracking algorithms like FedProx and Scaffold to prevent model divergence. | 2018 | [Li et al.](https://arxiv.org/abs/1812.06127) |
-| [**The Fully Decentralized & Trustless Era**](pages/Fully_Decentralized.md) | Eliminates the central coordinator server entirely. Clients communicate over a peer-to-peer mesh network, often utilizing blockchain ledgers or smart contracts to manage trust, consensus, and model aggregation. | 2018 | [Lalitha et al.](https://arxiv.org/abs/1802.08722) |
+| [**The Foundation Era (FedAvg)**](pages/FedAvg.md) 🏛️ | Introduced by Google researchers. Synchronous rounds of local Stochastic Gradient Descent (SGD) on client devices, followed by weighted parameter averaging on a central coordinator server. | 2016 | [McMahan et al. (AISTATS)](https://arxiv.org/abs/1602.05629) |
+| [**The System Heterogeneity Era**](pages/System_Heterogeneity.md) ⚡ | Developed to handle Non-IID (not identically and independently distributed) data distributions and varying client hardware speeds, introducing tracking algorithms like FedProx and SCAFFOLD to prevent client drift. | 2018 | [Li et al. (MLsys)](https://arxiv.org/abs/1812.06127) |
+| [**The Fully Decentralized & Trustless Era**](pages/Fully_Decentralized.md) ⛓️ | Eliminates the single point of failure (central server). Clients communicate over peer-to-peer (P2P) mesh networks, leveraging blockchain smart contracts or gossip protocols for Byzantine-fault-tolerant aggregation. | 2018 | [Lalitha et al. (NeurIPS Workshop)](https://arxiv.org/abs/1802.08722) |
 
 ---
 
 ## 🏗️ 2. Structural & Data Partitioning Variants
 
-These variants define how data is distributed across different nodes in the network based on the overlap of sample spaces and feature spaces.
+These variants define how data is distributed across participating nodes based on the overlap of sample spaces (users/rows) and feature spaces (variables/columns).
 
-| Variant | Mechanism & Example | Year First Used | Paper Link |
-| :--- | :--- | :--- | :--- |
-| [**Horizontal Federated Learning (Sample-Based)**](pages/Horizontal_FL.md) | **Mechanism:** Datasets share the exact same feature space but differ significantly in their sample IDs.<br>**Example:** Two regional banks training a joint fraud detection system. Both banks collect identical metrics (income, transactions) but own completely different, distinct customer bases. | 2019 | [Yang et al.](https://arxiv.org/abs/1902.04885) |
-| [**Vertical Federated Learning (Feature-Based)**](pages/Vertical_FL.md) | **Mechanism:** Datasets share overlapping sample IDs but differ in their feature spaces.<br>**Example:** A local bank and an e-commerce company in the same city. They share many of the same customers, but the bank holds financial history while the e-commerce company holds retail buying history. | 2019 | [Yang et al.](https://arxiv.org/abs/1902.04885) |
-| [**Federated Transfer Learning (FTL)**](pages/Federated_Transfer_Learning.md) | **Mechanism:** Applied when both the sample IDs and the feature spaces have very little overlap across clients. Uses deep transfer learning to map the distinct feature spaces into a shared, hidden representation layer before executing federated calculations. | 2019 | [Yang et al.](https://arxiv.org/abs/1902.04885) |
+| Variant | Mechanism & Architecture | Real-World Enterprise Example | Year | Seminal Paper |
+| :--- | :--- | :--- | :--- | :--- |
+| [**Horizontal Federated Learning (Sample-Based)**](pages/Horizontal_FL.md) ↔️ | Datasets share the exact same feature schema but differ in sample IDs. | Two regional banks training a joint fraud detection model across disjoint customer bases. | 2019 | [Yang et al.](https://arxiv.org/abs/1902.04885) |
+| [**Vertical Federated Learning (Feature-Based)**](pages/Vertical_FL.md) ↕️ | Datasets share overlapping sample IDs (entities) but differ in feature spaces. | A municipal bank and an e-commerce platform in the same region combining credit scores with shopping habits. | 2019 | [Yang et al.](https://arxiv.org/abs/1902.04885) |
+| [**Federated Transfer Learning (FTL)**](pages/Federated_Transfer_Learning.md) 🔀 | Neither sample IDs nor feature spaces have substantial overlap across clients. | Cross-border collaboration between a European cancer institute and an Asian genomic research lab. | 2019 | [Liu et al.](https://arxiv.org/abs/1902.04885) |
 
 ---
 
 ## 🌐 3. Network Architecture & Scaling Types
 
-These types define the system-level topology and physical distribution of the participating processing units.
+These types define system-level topology, hardware capabilities, and communication constraints of participating processing units.
 
-| Type | Topology & Constraints | Year First Used | Paper Link |
-| :--- | :--- | :--- | :--- |
-| [**Cross-Device Federated Learning**](pages/Cross_Device_FL.md) | **Topology:** Scales to millions of highly unstable, resource-constrained mobile or IoT devices.<br>**Constraints:** Communication must be asynchronous, and the system must survive high client dropout rates (churn) since devices frequently lose network connections or power. | 2019 | [Kairouz et al.](https://arxiv.org/abs/1912.04977) |
-| [**Cross-Silo Federated Learning**](pages/Cross_Silo_FL.md) | **Topology:** Involves a small, fixed number of highly reliable institutional organizations (e.g., 5 to 20 medical centers or financial institutions).<br>**Constraints:** All clients are almost always online, possess immense computing infrastructure, and require rigorous compliance and audit trails. | 2019 | [Kairouz et al.](https://arxiv.org/abs/1912.04977) |
+| Type | Scale & Topology | Hardware & Communication Constraints | Year | Seminal Paper |
+| :--- | :--- | :--- | :--- | :--- |
+| [**Cross-Device Federated Learning**](pages/Cross_Device_FL.md) 📱 | Scales to millions of consumer edge devices (smartphones, smart home hubs, IoT sensors). | High client churn, variable bandwidth, battery and thermal limits, asynchronous aggregation. | 2019 | [Kairouz et al.](https://arxiv.org/abs/1912.04977) |
+| [**Cross-Silo Federated Learning**](pages/Cross_Silo_FL.md) 🏢 | Involves 2 to 100 enterprise organizations (hospitals, banks, aerospace consortia). | Reliable high-speed fiber networks, multi-GPU servers, high regulatory compliance, strict audit trails. | 2019 | [Kairouz et al.](https://arxiv.org/abs/1912.04977) |
 
 ---
 
 ## 🔐 4. Advanced Security & Privacy Adapters
 
-While Federated Learning keeps raw data local, model gradients can still leak private information through reverse-engineering attacks. These variants augment FL with cryptographic boundaries.
+While Federated Learning prevents raw data centralization, gradient updates can still leak confidential records through model inversion and membership inference attacks. These adapters fortify the learning pipeline.
 
-| Adapter | Mechanism | Year First Used | Paper Link |
-| :--- | :--- | :--- | :--- |
-| [**Differential Privacy (DP) Federated Learning**](pages/Differential_Privacy.md) | Adds mathematical Gaussian or Laplacian noise directly to local gradients before sending them to the aggregator. This guarantees that an adversary cannot deduce whether a specific individual's data was used in training. | 2017 | [Geyer et al.](https://arxiv.org/abs/1712.07557) |
-| [**Secure Multi-Party Computation (SMPC)**](pages/SMPC.md) | Uses cryptographic secret sharing protocols. The central server can only see the combined, aggregated total of all client updates, keeping individual client weight updates completely unreadable during transit. | 2017 | [Bonawitz et al.](https://eprint.iacr.org/2017/281) |
-| [**Trusted Execution Environments (TEE-FL)**](pages/TEE_FL.md) | Directs the aggregation phase to execute inside secure, hardware-isolated memory enclaves (like Intel SGX) on the cloud server, protecting the global model from being compromised by cloud provider insiders. | 2020 | [Mo et al.](https://arxiv.org/abs/2104.14380) |
+| Security Adapter | Cryptographic Mechanism | Threat Model Defended | Year | Seminal Paper |
+| :--- | :--- | :--- | :--- | :--- |
+| [**Differential Privacy (DP-FL)**](pages/Differential_Privacy.md) 🛡️ | Adds calibrated Gaussian or Laplacian perturbation noise to local weight updates before central aggregation. | Prevents model inversion and reconstruction attacks. | 2017 | [Geyer et al.](https://arxiv.org/abs/1712.07557) |
+| [**Secure Multi-Party Computation (SMPC)**](pages/SMPC.md) 🔑 | Employs Shamir's Secret Sharing or garbled circuits so the aggregator only reconstructs sum totals. | Prevents honest-but-curious server from inspecting individual gradients. | 2017 | [Bonawitz et al.](https://eprint.iacr.org/2017/281) |
+| [**Trusted Execution Environments (TEE-FL)**](pages/TEE_FL.md) 🔒 | Runs model aggregation and decryption inside hardware-isolated enclaves (e.g., Intel SGX, AMD SEV). | Protects against root-privileged insiders and hypervisor intrusions. | 2020 | [Mo et al.](https://arxiv.org/abs/2104.14380) |
 
 ---
 
 ## 🏭 5. Production Real-World Applications
 
-| Application | Description | Year First Used | Paper Link |
-| :--- | :--- | :--- | :--- |
-| [**Smart Keyboard Next-Word Prediction**](pages/Smart_Keyboard.md) | Modern smartphones collaboratively train autocomplete and text correction models locally on user devices without sending private chats, keys, or text entries back to a corporate cloud. | 2018 | [Hard et al.](https://arxiv.org/abs/1811.03604) |
-| [**De-Identified Medical Image Diagnostics**](pages/Medical_Image.md) | Hospitals worldwide train a unified deep neural network to detect rare tumors by aggregating model updates across silos, successfully bypassing strict medical data privacy laws (like HIPAA or GDPR). | 2020 | [Rieke et al.](https://www.nature.com/articles/s41746-020-00323-1) |
-| [**Autonomous Fleet Learning**](pages/Autonomous_Fleet.md) | Self-driving vehicle fleets process edge-case driving data locally on their internal hardware boards overnight, uploading compressed structural model adjustments over Wi-Fi to improve global object detection arrays simultaneously. | 2018 | [Samarakoon et al.](https://arxiv.org/abs/1807.08127) |
-
-
-## ⭐️ Star History
-<div align="center">
-<a href="https://www.star-history.com/?repos=ishandutta2007/Awesome-Federated-Learning&type=date&legend=bottom-right">
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Federated-Learning&type=date&theme=dark&legend=bottom-right" />
-<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Federated-Learning&type=date&legend=bottom-right" />
-<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Federated-Learning&type=date&legend=bottom-right" />
-</picture>
-</a>
-</div>
-# Awesome-Federated-Learning
-
-## Top Federated Learning Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Privacy-Preserving Collaborative Training, Decentralized Data & Self-Hosted FL Frameworks*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Federated Learning**. These tools enable multiple parties to collaboratively train machine learning models without centralizing raw data—critical for healthcare, finance, and any domain where data sovereignty and regulatory compliance are non-negotiable.
-
-
-
-**Examples** include Flower, NVIDIA FLARE (Clara), IBM Federated Learning, Rhino Health, Owkin, FedML, PySyft, Substra, EdgeDelta, and Apheris (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, healthcare-grade deployments, and transparent privacy guarantees—ideal for hospitals, research consortia, and enterprises that cannot centralize sensitive data. The open-source landscape is anchored by **TensorFlow Federated** (Google's research framework), **Flower** (framework-agnostic standard), **NVIDIA FLARE** (enterprise/regulated deployments), **Substra** (healthcare production-proven from Owkin), and **PySyft** (encrypted computation), with **FedML** bridging research and production and **OpenFL** (Intel) providing an alternative enterprise-grade option.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[NVIDIA Clara](https://www.nvidia.com/en-us/clara/)**  
-
-  NVIDIA's healthcare AI platform, with NVIDIA FLARE as its federated learning runtime. Clara provides domain-specific tooling for medical imaging and genomics, while FLARE handles the federated orchestration.
-
-
-
-- **[Owkin](https://www.owkin.com/)**  
-
-  AI biotech company that originated Substra and remains its primary contributor. Offers federated learning services for pharmaceutical research and clinical trials, with Substra as the underlying open-source foundation.
-
-
-
-- **[Rhino Health](https://www.rhinohealth.com/)**  
-
-  Federated learning platform specifically designed for healthcare and life sciences. Focuses on enabling multi-institutional collaboration while maintaining HIPAA and GDPR compliance. Commercial offering with healthcare-specific workflows.
-
-
-
-- **[Flower (Cloud/Enterprise)](https://flower.ai/)**  
-
-  Commercial tier of the Flower federated learning framework. Offers managed infrastructure and enterprise support for the open-source core. Flower is framework-agnostic and widely used in research.
-
-
-
-- **[IBM Federated Learning](https://www.ibm.com/products/federated-learning)**  
-
-  IBM's enterprise federated learning offering, integrated with IBM Cloud Pak for Data and Watson Studio. Supports both horizontal and vertical federated learning. Commercial support and integration with IBM's broader AI governance tooling.
-
-
-
-- **[EdgeDelta](https://edgedelta.com/)**  
-
-  Observability platform with edge processing capabilities. While not a pure federated learning platform, it supports distributed data processing at the edge, relevant for privacy-sensitive inference scenarios.
-
-
-
-- **[Apheris](https://www.apheris.com/)**  
-
-  Enterprise federated learning platform focused on regulated industries (healthcare, finance, manufacturing). Provides governance, audit trails, and compliance controls for multi-party data collaboration.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[TensorFlow Federated (TFF)](https://github.com/tensorflow/federated)**  
-
-  Google's open-source framework for machine learning and other computations on decentralized data. TFF provides two layers: the **Federated Learning (FL) API** (`tff.learning`) for applying included federated training and evaluation to existing TensorFlow models, and the **Federated Core (FC) API** for expressing novel federated algorithms by combining TensorFlow with distributed communication operators . Includes a single-machine simulation runtime for experiments. Best for TensorFlow-centric research teams that want to experiment with novel FL algorithms and need fine-grained control over federated computation primitives.
-
-
-
-- **[Flower](https://github.com/adap/flower)**  
-
-  Framework-agnostic federated learning framework with a client-server abstraction that works with PyTorch, TensorFlow, JAX, scikit-learn, Hugging Face, PyTorch Lightning, fastai, MLX, XGBoost, and even Pandas for federated analytics . Widely adopted in research for its simplicity and flexibility. Flower Baselines provides community-contributed reproductions of popular FL publications (FedProx, FedNova, FedBN, FedMeta, and more) for researchers to build upon . Apache 2.0 licensed. Best for research and teams that want to avoid framework lock-in while maintaining access to state-of-the-art FL algorithms.
-
-
-
-- **[NVIDIA FLARE](https://github.com/NVIDIA/NVFlare)**  
-
-  NVIDIA Federated Learning Application Runtime Environment. Domain-agnostic Python SDK supporting horizontal and vertical federated learning, with peer-reviewed research implementations across medical imaging, federated optimization, privacy analysis, and large language models—including FedBPT (ICML 2024), ConDistFL (DeCaF 2023), FedBN (ICLR 2021), and privacy-preserving brain tumour segmentation (MLMI 2019) . Component-based architecture with Controller/Worker execution model and support for both simulation and production deployment. Apache 2.0 licensed. Best for enterprise and regulated deployments, including clinical use cases with a strong research track record.
-
-
-
-- **[Substra](https://github.com/Substra/substra)**  
-
-  The most proven open-source federated learning software designed for healthcare research . Originally developed by Owkin and now hosted by the Linux Foundation for AI and Data. Provides a flexible Python interface and web application for running FL training at scale. Has been deployed in production by hospitals and biotech companies (e.g., the MELLODDY project) . Apache 2.0 licensed across its repository ecosystem (substrafl, substra-backend, substra-frontend, orchestrator) . Best for healthcare consortia and production clinical research where regulatory compliance and real-world deployment are primary requirements.
-
-
-
-- **[PySyft (OpenMined)](https://github.com/OpenMined/PySyft)**  
-
-  A Python library for secure, private deep learning that decouples private data from model training using Multi-Party Computation (MPC) within PyTorch . Emphasizes privacy-preserving and encrypted computation over distributed data, rather than being purely a federated averaging framework. Apache 2.0 licensed. **Important caveat**: the project's own README historically stated "Do NOT use this code to protect data (private or otherwise) - at present it is very insecure" . Best for research and experimentation with privacy primitives, not production privacy guarantees without additional hardening.
-
-
-
-- **[FedML](https://github.com/FedML-AI/FedML)**  
-
-  Unified and scalable ML library for large-scale distributed training, model serving, and federated learning. Targets cross-device and cross-silo production workflows with a unified research library . 4,170+ GitHub stars, Apache 2.0 licensed. Includes specialized sub-projects: FedNLP (NAACL 2022), FedGraphNN (ICLR'21 workshops), FedCV (computer vision), FedIoT (on-device anomaly detection), and FedML-Mobile (Android/iOS) . Best for teams that want to bridge research experimentation and production federated learning across diverse domains.
-
-
-
-- **[OpenFL (Intel)](https://github.com/securefederatedai/openfl)**  
-
-  Open framework for federated learning, now hosted by LF AI & Data . Features a Workflow API (experimental) inspired by Metaflow for composing custom aggregator and collaborator tasks, plus a Privacy Meter based on membership inference attacks for evaluating privacy leakage . Includes tutorials for scikit-learn linear regression and PyTorch FedProx. Best for Intel-based research clusters and teams seeking an enterprise-oriented alternative to Flower with built-in privacy evaluation tooling.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **IBM Federated Learning (Community Edition)** — Free for non-commercial use, with built-in enterprise-strength features. Available at `IBM/federated-learning-lib` . Best for exploring IBM's FL approach before committing to the commercial offering.
-
-- **Fed-BioMed** — Open-source project focused on empowering healthcare using non-centralized approaches for statistical analysis and machine learning, based on Python, PyTorch, and Scikit-learn . Best for healthcare research with a focus on medical imaging and clinical data.
-
-- **FATE (WeBank)** — Federated AI Technology Enabler, widely used in Chinese enterprise deployments. Supports horizontal and vertical federated learning with privacy mechanisms including differential privacy and secure computation .
-
-- **Frameworks for building custom systems**: Pair **Flower** for framework-agnostic orchestration with **Substra** for healthcare-grade production deployment. Use **NVIDIA FLARE** when enterprise support and a proven research track record in medical imaging are priorities. **TensorFlow Federated** provides the lowest-level primitives for novel algorithm development, while **PySyft** offers MPC-based encrypted computation for advanced privacy experiments. **OpenFL** bridges research and production with Intel's ecosystem and privacy evaluation tools.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Federated learning frameworks vary significantly in privacy guarantees (differential privacy, homomorphic encryption, secure aggregation), healthcare compliance readiness, and operational complexity; evaluate against your regulatory requirements.
-
-- PySyft's own documentation has historically warned against using it to protect sensitive data due to security limitations; verify current status before production use .
-
-- Self-hosted solutions require proper PKI setup, network security, and audit logging to ensure that "privacy-preserving" claims hold in practice.
-
-
+| Domain | Application Description | Impact & Regulatory Compliance | Year | Clinical/Industrial Link |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mobile & Consumer** 📱 | [**Smart Keyboard Next-Word Prediction**](pages/Smart_Keyboard.md) | Gboard and iOS predict next tokens locally without logging user keystrokes to remote servers. | 2018 | [Hard et al.](https://arxiv.org/abs/1811.03604) |
+| **Healthcare & Oncology** 🏥 | [**De-Identified Medical Image Diagnostics**](pages/Medical_Image.md) | Global hospitals train federated models for glioblastoma, rare tumours, and COVID-19 detection. | 2020 | [Rieke et al. (Nature)](https://www.nature.com/articles/s41746-020-00323-1) |
+| **Automotive & Robotics** 🚗 | [**Autonomous Fleet Learning**](pages/Autonomous_Fleet.md) | Connected self-driving vehicle fleets train edge-case perception models locally during nightly depot charging. | 2018 | [Samarakoon et al.](https://arxiv.org/abs/1807.08127) |
 
 ---
 
+## ☁️ 6. Top SaaS & Hosted Platforms
 
+### 📊 Sector Overview & Market Dynamics
 
-**Made for healthcare AI researchers, privacy engineers, data governance teams, and organizations building collaborative intelligence without centralizing sensitive data.**  
+The global **Federated Learning Market** is estimated at **$140M–$160M in 2024** and is projected to surpass **$3.6B by 2032**, expanding at a compound annual growth rate (**CAGR**) of **~31.5%**, propelled by tightening global data privacy legislation (GDPR, HIPAA, EU AI Act) and the surge in decentralized edge computing.
 
-Let's make federated learning more open, auditable, and deployable in regulated environments.
+The sector is currently **moderately to highly fragmented** rather than a winner-take-all monopoly: distinct market sub-segments are led by specialized champions—such as **Owkin** and **Rhino Health** dominating biopharma and clinical consortia, **NVIDIA** and **IBM** anchoring enterprise GPU compute and multi-cloud data fabrics, and **Flower Labs**, **FedML**, and **EdgeDelta** catering to developer-first serverless edge orchestration and streaming observability.
+
+### 🏢 Enterprise SaaS Matrix
+
+The table below catalogs leading commercial and hosted federated learning solutions, sorted in descending order by parent company scale (valuation or market capitalization):
+
+| Platform / Company | Company Size (Valuation / Revenue) | Starting Pricing | Free Tier Limits & Trial Period | Key Features & Architecture Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| **[NVIDIA AI Enterprise (Clara / FLARE)](https://www.nvidia.com/en-us/clara/)** 🟢 | **~$3.3T–$4.5T Market Cap**<br>*(FY25 Rev: $130.5B)* | **$4,500 / GPU / year** list subscription (or **$1.00 / GPU / hour** via AWS, Azure, & GCP cloud marketplaces) | **90-Day Free Trial** evaluation license for full AI Enterprise stack (including NIM microservices & FLARE runtime) + free NGC developer sandbox access on `build.nvidia.com` | Healthcare AI, MONAI imaging integrations, production cross-silo FL, vertical and horizontal workflows. |
+| **[IBM watsonx.ai (Federated Learning)](https://www.ibm.com/products/federated-learning)** 🔵 | **~$275B Market Cap**<br>*(FY25 Rev: $67.5B)* | **$1.02 / Capacity Unit Hour (CUH)** on Essentials pay-as-you-go; Professional Studio plans from **$1,050 / month** | **Forever-Free "Lite Plan"** capped at 10 to 20 CUH/month, 1 authorized user, 1 instance, 25 GB cloud object storage, and 300,000 foundation model tokens/month | Enterprise AI governance, Cloud Pak for Data fabric, cryptographic aggregation, banking and financial compliance. |
+| **[Owkin Substra Enterprise](https://www.owkin.com/)** 🦄 | **$1.46B Valuation** *(Series B Unicorn)*<br>*(Est. Rev: $35M–$50M)* | **$50,000 / deployment** for structured biopharma research pilots; multi-center annual licenses from **$250,000 / year** | **30-Day Proof-of-Concept (PoC) Trial** for qualifying academic medical centers and life sciences consortia with dedicated onboarding support | Clinical trial optimization, MELLODDY drug discovery, multi-hospital histology and genomics collaboration. |
+| **[EdgeDelta](https://edgedelta.com/)** ⚡ | **~$350M Valuation** *(Series B)*<br>*(Est. Rev: $10M–$14M)* | **$50 / month** base for Pro; unlimited pipeline throughput is **$0.00**; Cloud search/retention starts at **$0.05 / GB** | **Forever-Free Community Plan** with unlimited streaming telemetry pipeline throughput + 10 GB/day index/storage retention limit and live interactive sandbox demo | Federated telemetry, distributed on-node streaming analytics, edge anomaly detection, zero raw data ingestion costs. |
+| **[Flower Labs (Flower SuperGrid)](https://flower.ai/)** 🌸 | **$100M Valuation** *(Series A)*<br>*(Est. ARR: ~$5M)* | **$17 / month** (billed annually) or **$20 / month** (billed monthly) for SuperGrid Pro tier | **Forever-Free Tier** with **3,000 free sign-up credits** on Flower Hub, unlimited public federations, and access to local/simulated runtimes | Framework-agnostic (PyTorch, TF, JAX, Hugging Face, Scikit-learn), managed serverless infrastructure, confidential compute. |
+| **[FedML (FedML Nexus AI)](https://fedml.ai/)** 🚀 | **~$85M Valuation** *($11.5M Seed)*<br>*(Est. ARR: ~$4M)* | **$29 / user / month** base platform license + on-demand GPU training instances starting at **$0.40 / GPU / hour** (RTX 4090) up to **$2.49 / GPU / hour** (A100/H100) | **Forever-Free Tier** with access to community Job Store templates, open-source SDK, and **5 free GPU compute trial hours** upon registration | Unified cross-cloud scheduler (FedML Launch), edge mobile FL (Android/iOS), MLOps pipelines, distributed LLM fine-tuning. |
+| **[Rhino Health (Rhino FCP)](https://www.rhinohealth.com/)** 🦏 | **~$75M Valuation** *(Series A)*<br>*(Est. Rev: ~$4.8M)* | **$25,000** for a single multi-site pilot project (or **$2,500 / node / month** via AWS Marketplace private contract offers) | **30-Day Guided Pilot Evaluation** for qualifying hospital/biotech teams with 2 connected mock hospital edge nodes and simulated EHR data | Federated Computing Platform (FCP), EXAM study pedigree, HIPAA/GDPR health data networks, distributed real-world evidence (RWE). |
+| **[Apheris Compute Gateway](https://www.apheris.com/)** 🛡️ | **~$36M Valuation** *(Series A)*<br>*(Est. Rev: ~$6.7M)* | **$15,000 / quarter** (**$5,000 / month**) entry contract tier for cross-enterprise compute gateway deployments | **14-Day Sandboxed Interactive Demo** with synthetic multi-partner governance simulation and compliance validation for enterprise security teams | Multi-partner governance, zero-trust cryptographic audit trails, manufacturing and biopharma IP collaboration. |
+
+---
+
+## 💻 7. Top Open-Source GitHub Frameworks
+
+Curated collection of top open-source repositories for self-hosted federated learning, privacy-preserving machine learning, and decentralized model training. **Sorted descending by GitHub star count**:
+
+| Framework & Repository | Stars | Primary Language / Ecosystem | Description & Architectural Highlights | License |
+| :--- | :--- | :--- | :--- | :--- |
+| **[PySyft](https://github.com/OpenMined/PySyft)** 🔐 | [![Stars](https://img.shields.io/github/stars/OpenMined/PySyft?style=social&color=white)](https://github.com/OpenMined/PySyft/stargazers) | Python • PyTorch | OpenMined's flagship library for secure, private deep learning. Decouples private data from model training using Multi-Party Computation (MPC), Differential Privacy, and Homomorphic Encryption primitives. | Apache 2.0 |
+| **[Flower](https://github.com/adap/flower)** 🌸 | [![Stars](https://img.shields.io/github/stars/adap/flower?style=social&color=white)](https://github.com/adap/flower/stargazers) | Python • Agnostic | The industry standard framework-agnostic FL framework. Seamlessly interoperates with PyTorch, TensorFlow, JAX, Hugging Face, Scikit-learn, and MLX. Supports massive scalability from mobile edge devices to multi-GPU clusters. | Apache 2.0 |
+| **[FATE](https://github.com/FederatedAI/FATE)** 🏛️ | [![Stars](https://img.shields.io/github/stars/FederatedAI/FATE?style=social&color=white)](https://github.com/FederatedAI/FATE/stargazers) | Python • C++ | Federated AI Technology Enabler initiated by WeBank and hosted by the Linux Foundation. An industrial-grade framework supporting horizontal and vertical federated learning with multi-party cryptographic acceleration. | Apache 2.0 |
+| **[FedML](https://github.com/FedML-AI/FedML)** 🚀 | [![Stars](https://img.shields.io/github/stars/FedML-AI/FedML?style=social&color=white)](https://github.com/FedML-AI/FedML/stargazers) | Python • PyTorch | Unified and scalable ML library for large-scale distributed training, model serving, and federated learning across cross-device (Android/iOS/IoT) and cross-silo enterprise setups. Includes FedNLP, FedCV, and FedLLM suites. | Apache 2.0 |
+| **[TensorFlow Federated (TFF)](https://github.com/tensorflow/federated)** 🧠 | [![Stars](https://img.shields.io/github/stars/tensorflow/federated?style=social&color=white)](https://github.com/tensorflow/federated/stargazers) | Python • TensorFlow | Google's research foundation for machine learning computations on decentralized data. Features the high-level Federated Learning (FL) API and low-level Federated Core (FC) API for novel distributed algorithm development. | Apache 2.0 |
+| **[PFLlib](https://github.com/TsingZ0/PFLlib)** 📚 | [![Stars](https://img.shields.io/github/stars/TsingZ0/PFLlib?style=social&color=white)](https://github.com/TsingZ0/PFLlib/stargazers) | Python • PyTorch | A 30+ personalized federated learning (PFL) algorithm benchmark library. Simulates non-IID and heterogeneous clients with plug-and-play implementations (Per-FedAvg, pFedMe, FedRep, DitTo, and FedBABU). | MIT |
+| **[FederatedScope](https://github.com/alibaba/FederatedScope)** 🌐 | [![Stars](https://img.shields.io/github/stars/alibaba/FederatedScope?style=social&color=white)](https://github.com/alibaba/FederatedScope/stargazers) | Python • PyTorch | Alibaba's event-driven federated learning platform. Features rich support for personalized FL, federated graph neural networks (FedGNN), differential privacy, and asynchronous message-passing topologies. | Apache 2.0 |
+| **[Federated-Learning-PyTorch](https://github.com/AshwinRJ/Federated-Learning-PyTorch)** ⚡ | [![Stars](https://img.shields.io/github/stars/AshwinRJ/Federated-Learning-PyTorch?style=social&color=white)](https://github.com/AshwinRJ/Federated-Learning-PyTorch/stargazers) | Python • PyTorch | Clean, educational PyTorch implementation of Google's seminal paper *"Communication-Efficient Learning of Deep Networks from Decentralized Data"* (FedAvg) on Non-IID MNIST and CIFAR-10. | MIT |
+| **[NVIDIA FLARE](https://github.com/NVIDIA/NVFlare)** 🟢 | [![Stars](https://img.shields.io/github/stars/NVIDIA/NVFlare?style=social&color=white)](https://github.com/NVIDIA/NVFlare/stargazers) | Python • PyTorch/TensorFlow | NVIDIA Federated Learning Application Runtime Environment. Production-ready SDK engineered for high-throughput enterprise and clinical consortia. Integrates Controller/Worker execution models and MONAI support. | Apache 2.0 |
+| **[OpenFL](https://github.com/securefederatedai/openfl)** 🛡️ | [![Stars](https://img.shields.io/github/stars/securefederatedai/openfl?style=social&color=white)](https://github.com/securefederatedai/openfl/stargazers) | Python • Intel LF AI | Intel-incubated LF AI & Data framework for secure federated AI. Features a Workflow API inspired by Metaflow and an integrated Privacy Meter to quantify membership inference leakage risks. | Apache 2.0 |
+| **[FedLab](https://github.com/SMILELab-FL/FedLab)** 🔬 | [![Stars](https://img.shields.io/github/stars/SMILELab-FL/FedLab?style=social&color=white)](https://github.com/SMILELab-FL/FedLab/stargazers) | Python • PyTorch | Lightweight, highly modular federated learning framework developed by SMILE Lab. Provides clean abstractions for network communication, simulation, and real-world deployment across distributed clusters. | Apache 2.0 |
+| **[IBM Federated Learning](https://github.com/IBM/federated-learning-lib)** 🔵 | [![Stars](https://img.shields.io/github/stars/IBM/federated-learning-lib?style=social&color=white)](https://github.com/IBM/federated-learning-lib/stargazers) | Python • Multi-framework | IBM's enterprise-grade Python library for federated learning in hostile or untrusted environments. Supports complex aggregators, topology configurations, and integration with IBM Watson Studio. | Apache 2.0 |
+| **[PaddleFL](https://github.com/PaddlePaddle/PaddleFL)** 🛶 | [![Stars](https://img.shields.io/github/stars/PaddlePaddle/PaddleFL?style=social&color=white)](https://github.com/PaddlePaddle/PaddleFL/stargazers) | Python • PaddlePaddle | Baidu's federated learning framework built on PaddlePaddle. Enables replication of distributed training algorithms across computer vision, natural language processing, and recommendation systems. | Apache 2.0 |
+| **[Substra](https://github.com/Substra/substra)** 🏥 | [![Stars](https://img.shields.io/github/stars/Substra/substra?style=social&color=white)](https://github.com/Substra/substra/stargazers) | Python • LF AI & Data | Originally created by Owkin and hosted by Linux Foundation AI & Data. A clinical production-proven federated learning software suite featuring advanced auditability, web UI tracking, and cross-hospital orchestration. | Apache 2.0 |
+| **[MedPerf](https://github.com/mlcommons/medperf)** 🩺 | [![Stars](https://img.shields.io/github/stars/mlcommons/medperf?style=social&color=white)](https://github.com/mlcommons/medperf/stargazers) | Python • MLCommons | An open-source framework by MLCommons for benchmarking medical AI models on decentralized clinical datasets in a vendor-neutral, auditable, and privacy-preserving manner. | Apache 2.0 |
+| **[Fed-BioMed](https://github.com/fedbiomed/fedbiomed)** 🧬 | [![Stars](https://img.shields.io/github/stars/fedbiomed/fedbiomed?style=social&color=white)](https://github.com/fedbiomed/fedbiomed/stargazers) | Python • PyTorch | An open-source biomedical research framework empowering non-centralized statistical and machine learning analyses across healthcare clinics and academic hospital sites. | Apache 2.0 |
+
+---
+
+## 🤝 8. How to Contribute
+
+Contributions are warmly welcomed! Help make this repository the definitive resource for the global federated learning community:
+
+1. 🍴 **Fork the repository** on GitHub.
+2. 🌿 **Create a new branch** (`git checkout -b feature/awesome-addition`).
+3. 📝 **Add or update entries** following our established table schemas, including specific pricing, free tier limits, star badges, and links.
+4. ✅ **Ensure code and link integrity**: Keep descriptions objective, factual, and backed by seminal literature or official documentation.
+5. 🚀 **Submit a Pull Request** with a concise description of your additions.
+
+---
+
+## ☕ 9. Support & Community
+
+Thank you so much for exploring and supporting **Awesome-Federated-Learning**! ❤️
+
+Building and maintaining this open knowledge repository requires continuous curation, paper verification, and ecosystem tracking. If this repository helped you in your research, production architecture, or commercial deployment:
+
+- ⭐ **Star this repository** to boost visibility and help others discover it.
+- 🍴 **Fork it** and build your own specialized federated workflows.
+- 📢 **Share it** on Twitter/X, LinkedIn, Discord, and Reddit with fellow researchers and ML engineers.
+- ☕ **Support ongoing development & sponsor the creator**: You can buy a coffee or sponsor through the **[GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)**!
+
+<div align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor%20Me-%E2%9D%A4-pink?style=for-the-badge&logo=github-sponsors" alt="Sponsor on GitHub" height="38"/>
+  </a>
+</div>
+
+---
+
+## ⭐️ 10. Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Federated-Learning&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Federated-Learning&type=date&legend=top-left)
+
+---
+
+## ⚠️ 11. Disclaimer
+
+- This repository is a **community-curated guide** intended for research, academic exploration, and architectural planning; it does not constitute financial, investment, or legal compliance advice.
+- Federated learning architectures exhibit substantial variations in mathematical privacy guarantees (e.g., $(\epsilon, \delta)$-differential privacy bounds, additive homomorphic encryption key sizes, secure aggregation drop-out resilience). Always conduct thorough penetration testing and cryptographic audits before deploying models on sensitive or regulated production data.
+- Third-party SaaS valuations, pricing tiers, and trial limits reflect publicly reported commercial listings and venture disclosures as of October 2026 and remain subject to change by their respective providers.
+
+---
+
+<div align="center">
+  <sub>Maintained with ❤️ by <a href="https://github.com/ishandutta2007">Ishan Dutta</a> and the open-source privacy-preserving AI community.</sub>
+</div>
